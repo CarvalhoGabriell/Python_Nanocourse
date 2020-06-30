@@ -1,4 +1,4 @@
-from PythonAulas.funcoes import *
+from PythonAulas.Capitulo_3_e_4.funcoes import *
 
 usuarios = {}
 
