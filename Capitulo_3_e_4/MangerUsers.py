@@ -1,9 +1,11 @@
+from Pacote_funcoes.identificarFuncoes import *
+
 usuarios = {}
 
 opcao = perguntar()
 
 while opcao == "I" or opcao == "D" or opcao == "L" or opcao == "P":
     if opcao =="I":
-        inserir(usuarios)
+        inserirUsuario(usuarios)
 opcao = perguntar()
 
