@@ -1,44 +1,42 @@
-produtos = []
-marcas = []
-Ids = []
+equipamentos = []
 valores = []
+Ids = []
 departamentos = []
+marcas = []
 
 res = "SIM"
 while res == "SIM":
-    produtos.append(input("Qual o nome do produto? "))
+    equipamentos.append(input("Qual o nome do equipamento? "))
     marcas.append(input("Qual a marca dele? "))
     Ids.append(int(input("Digite o ID do produto para identica-lo: ")))
-    valores.append(float(input("Quanto custa? ")))
+    valores.append(float(input("Qual o valor do equipamento? ")))
     departamentos.append(input("Qual o departamento ele pertence? "))
     res = input("Digite \"SIM\" para continuar adicionando elementos.").upper()
 
-for indice in range(0, len(produtos)):
-    print("\nEquipamentos:... ", (indice + 1))
-    print("nome:... ", produtos[indice])
-    print("ID.....", Ids[indice])
-    print("valor:... R$ ", valores[indice])
-    print("Departamento:... ", departamentos[indice])
+for indice in range(0, len(equipamentos)):
+    print("\nEquipamentos:...: ", (indice + 1))
+    print("nome:...: ", equipamentos[indice])
+    print("ID.....: ", Ids[indice])
+    print("valor:...: R$ ", valores[indice])
+    print("Departamento:...:", departamentos[indice])
 
-
-busca = input("\nDigite o nome do produto que deseja buscar: ")
-for indice in range(0, len(produtos)):
-    if busca == produtos[indice]:
+busca = input("\nDigite qual equipamento deseja buscar: ")
+for indice in range(0, len(equipamentos)):
+    if busca == equipamentos[indice]:
         print("Marca:...", marcas[indice])
         print("Numero de identificação ID:...",Ids[indice])
         print("Departamento:...", departamentos[indice])
         print("Valor:...",valores[indice])
 
-depreciacao = input("\nDigite nome do produto que será depreciado: ")
-for indice in range(0, len(produtos)):
-    if depreciacao == produtos[indice]:
-        print("Valor antigo do produto", valores[indice])
+depreciacao = input("\nDigite nome do equipamento que será depreciado: ")
+for indice in range(0, len(equipamentos)):
+    if depreciacao == equipamentos[indice]:
+        print("Valor antigo do equipamento", valores[indice])
         valores[indice] = valores[indice] * 0.5
-        print("Valor novo com o reajuste", valores[indice])
+        print("Valor com o novo reajuste", valores[indice])
 
-
-id = input("\nInforme o ID do produto que deseja deletar: ")
-for indice in range(0, len(produtos)):
+id = input("\nInforme o ID do equipamento que deseja deletar: ")
+for indice in range(0, len(equipamentos)):
     if id[indice] == Ids:
         del departamentos[indice]
         del marcas[indice]
@@ -46,25 +44,14 @@ for indice in range(0, len(produtos)):
         del valores[indice]
         break
 
-for indice in range(0, len(produtos)):
+## PRINT DA LISTA AGORA SEM OS PRODUTOS QUE FORAM DELETADOS
+for indice in range(0, len(equipamentos)):
         print("\nEquipamento..: ", (indice + 1))
-        print("Nome.........: ", produtos[indice])
+        print("Nome.........: ", equipamentos[indice])
         print("Valor........: ", valores[indice])
         print("Serial.......: ", Ids[indice])
         print("Departamento.: ", departamentos[indice])
 
-
-# ACESSAR UM LISTA INTERNA E SABER O VALOR MÁXIMO , MENOR E A SOMA.
-
-valores=[]
-for elemento in  produtos: #(LISTA EXTERNA )
-    valores.append(elemento[1])
-    if len(valores)>0:
-        print("O equipamento mais caro custa: ", max(valores))
-        print("O equipamento mais barato custa: ", min(valores))
-        print("Ototal de equipamentos é de: ", sum(valores))
-
-
-##PERCORRER UMA LISTA DE SINGULAR, OU SEJA , APENAS PASSANDO O NOME DESSA LISTA
-for artigos in produtos:
-    print("Produtos: ", artigos)
+# ##PERCORRER UMA LISTA DE SINGULAR, OU SEJA , APENAS PASSANDO O NOME DESSA LISTA
+# for artigos in equipamentos:
+#     print("Produtos: ", artigos)
