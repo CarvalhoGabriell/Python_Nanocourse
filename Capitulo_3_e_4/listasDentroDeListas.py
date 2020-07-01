@@ -15,3 +15,13 @@ for elemento in inventario:
     print("VALOR....: ", elemento[1])
     print("ID....: ", elemento[2])
     print("DEPARTAMENTO....: ", elemento[3], "\n")
+
+
+# # ACESSAR UM LISTA INTERNA E SABER O VALOR M�XIMO , MENOR E A SOMA.
+valores=[],
+for elemento in inventario: #(LISTA EXTERNA )
+    valores.append(elemento[1])
+    if len(valores)>0:
+        print("O equipamento mais caro custa: ", max(valores))
+        print("O equipamento mais barato custa: ", min(valores))
+        print("O total de equipamentos � de: ", sum(valores))
