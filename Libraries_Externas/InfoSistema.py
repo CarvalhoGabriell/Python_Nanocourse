@@ -20,6 +20,7 @@ print("O mês atual......:", datetime.now().minute, "minuto(s)")
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
 
 info_user = input("Informe seu usuário de acesso: ").upper()
+
 user = getpass.getuser()
 password = getpass.getpass("Digite sua senha: ")
 
