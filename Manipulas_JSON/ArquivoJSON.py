@@ -9,3 +9,5 @@ while opcao > 0 and opcao < 3:
         exibirInformacao("inventario_json.json")
     opcao = menuJson()
     print("PROCESSO FINALIZADO!!!!")
+
+
