@@ -13,7 +13,7 @@ while True:
     while True:
         msg_recebida = str(con.recv(1024))
         print("Recebemos...: ", msg_recebida)
-        msg_enviada = b'Hellouu cliente'
+        msg_enviada = b'Hellouu cliente bom te ver por aqui!!!'
         con.send(msg_enviada)
         break
     con.close()

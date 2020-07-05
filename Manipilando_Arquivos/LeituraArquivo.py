@@ -6,6 +6,6 @@ print("O tipo de dado do conteudo: ", type(conteudo))
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
 
 with open("Aquivo de texto teste.txt", "r") as directory:
-    conteudo = directory.read()
+    conteudo = directory.readlines()
 print("Conteudo do arquivo: ", conteudo)
 
